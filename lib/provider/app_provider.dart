@@ -8,8 +8,7 @@ final themeMap = {
 };
 
 class AppProvider extends ChangeNotifier {
-  static AppProvider state(BuildContext context, [bool listen = false]) =>
-      Provider.of<AppProvider>(context, listen: listen);
+  static AppProvider state(BuildContext context, [bool listen = false]) => Provider.of<AppProvider>(context, listen: listen);
 
   ThemeMode _themeMode = ThemeMode.light;
   ThemeMode get themeMode => _themeMode;

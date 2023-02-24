@@ -10,18 +10,14 @@ class NavBarLogo extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          "< ",
+          "",
           style: AppText.b1,
         ),
         Text(
-          "Hamza",
+          "Guilherme Sant'Ana",
           style: AppText.b1b!.copyWith(
             fontFamily: 'Agustina',
           ),
-        ),
-        Text(
-          MediaQuery.of(context).size.width >= 1000 ? " />\t\t" : " />",
-          style: AppText.b1,
         )
       ],
     );

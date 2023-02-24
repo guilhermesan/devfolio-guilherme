@@ -19,8 +19,8 @@ class HomeDesktop extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            bottom: 0,
-            right: 0,
+            top: size.height * 0.3,
+            right: size.width * 0.1,
             child: Opacity(
               opacity: 0.9,
               child: EntranceFader(
@@ -30,8 +30,8 @@ class HomeDesktop extends StatelessWidget {
                 child: Image.asset(
                   StaticUtils.blackWhitePhoto,
                   height: size.width < 1200
-                      ? size.height * 0.8
-                      : size.height * 0.85,
+                      ? size.height * 0.4
+                      : size.height * 0.4,
                 ),
               ),
             ),
@@ -68,7 +68,7 @@ class HomeDesktop extends StatelessWidget {
                 ),
                 Space.y1!,
                 Text(
-                  "Muhammad",
+                  "Guilherme",
                   style: AppText.h1!.copyWith(
                     fontFamily: 'Montserrat',
                     fontSize: AppDimensions.normalize(25),
@@ -76,7 +76,7 @@ class HomeDesktop extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Hamza",
+                  "Sant'Ana",
                   style: AppText.h1b!.copyWith(
                     fontSize: AppDimensions.normalize(25),
                     height: 1,
@@ -95,17 +95,17 @@ class HomeDesktop extends StatelessWidget {
                       AnimatedTextKit(
                         animatedTexts: [
                           TyperAnimatedText(
-                            ' Flutter Developer',
+                            ' Software Engineer',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,
                           ),
                           TyperAnimatedText(
-                            ' UI/UX Enthusiast',
+                            ' Android and Flutter Specialist',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,
                           ),
                           TyperAnimatedText(
-                            ' A friend :)',
+                            ' Problem solver',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,
                           ),

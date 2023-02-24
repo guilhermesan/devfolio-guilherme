@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/utils/about_utils.dart';
+import 'package:folio/utils/contact_utils.dart';
 import 'package:folio/utils/utils.dart';
 import 'package:folio/utils/work_utils.dart';
 
@@ -96,35 +97,27 @@ class AboutMobile extends StatelessWidget {
           ),
           const AboutMeData(
             data: "Name",
-            information: "Muhammad Hamza",
+            information: "Guilherme Sant'Ana",
           ),
           const AboutMeData(
             data: "Email",
-            information: "hamza.6.shakeel@gmail.com",
+            information: ContactUtils.email,
           ),
           Space.y!,
-          OutlinedButton(
-              child: const Text("Resume"),
-              onPressed: () {
-                kIsWeb
-                    ? html.window.open(StaticUtils.resume, "pdf")
-                    : openURL(StaticUtils.resume);
-              }),
-          Space.y!,
-          Wrap(
-              alignment: WrapAlignment.center,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: WorkUtils.logos
-                  .asMap()
-                  .entries
-                  .map(
-                    (e) => CommunityIconBtn(
-                      icon: e.value,
-                      link: WorkUtils.communityLinks[e.key],
-                      height: WorkUtils.communityLogoHeight[e.key],
-                    ),
-                  )
-                  .toList()),
+          // Wrap(
+          //     alignment: WrapAlignment.center,
+          //     crossAxisAlignment: WrapCrossAlignment.center,
+          //     children: WorkUtils.logos
+          //         .asMap()
+          //         .entries
+          //         .map(
+          //           (e) => CommunityIconBtn(
+          //             icon: e.value,
+          //             link: WorkUtils.communityLinks[e.key],
+          //             height: WorkUtils.communityLogoHeight[e.key],
+          //           ),
+          //         )
+          //         .toList()),
         ],
       ),
     );

@@ -1,7 +1,9 @@
 class AboutUtils {
   static const String aboutMeHeadline =
-      'I\'m Muhammad Hamza, a Flutter developer, Technical blog writer and UI designer.';
+      'I\'m Guilherme Sant\'Ana, a Software Engineer, Mobile specialist and curious about everything.';
 
-  static const String aboutMeDetail =
-      'I\'m a Fresh Graduate with Computer Science as Majors from COMSATS University, Islamabad. I have been developing mobile apps for over 2 years now. I have worked in teams for various startups and helped them in launching their prototypes and got valuable learning experience. Been a former  Google Developer Student Clubs (DSC) lead and also CEO/Co-Founder Flutter Islamabad, Pakistan. Currently working as Associate Software Engineer at Sastaticket.pk';
+  static const String aboutMeDetail = 'I\'m a software developer with over a decade of experience creating outstanding digital solutions. Throughout my career, '
+      'I\'ve had the privilege of working on some amazing projects, such as Bradesco Next (Brazil), Sonic Drive-In (USA), Groupon (Latam), and Merriam-Webster (USA).\n\n'
+      'I\'m passionate about building delightful digital experiences so products can not only solve problems but also make people\'s lives happier/\n\n'
+      'I believe that technology is a tool for solving problems. Therefore, we should focus on people and choose the correct tool for each problem, or even create new ones whenever necessary.';
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
 import 'package:folio/utils/about_utils.dart';
+import 'package:folio/utils/contact_utils.dart';
 
 import 'package:folio/utils/utils.dart';
 import 'package:folio/utils/work_utils.dart';
@@ -34,9 +35,12 @@ class AboutDesktop extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: Image.asset(
-                  StaticUtils.coloredPhoto,
-                  height: height * 0.7,
+                child: Padding(
+                  padding: const EdgeInsets.all(32.0),
+                  child: Image.asset(
+                    StaticUtils.coloredPhoto,
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
               Expanded(
@@ -99,14 +103,14 @@ class AboutDesktop extends StatelessWidget {
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              AboutMeData(
+                            children:  [
+                              const AboutMeData(
                                 data: "Name",
-                                information: "Muhammad Hamza",
+                                information: "Guilherme Sant'Ana",
                               ),
                               AboutMeData(
                                 data: "Age",
-                                information: "24",
+                                information: (DateTime.now().year - 1990).toString(),
                               ),
                             ],
                           ),
@@ -116,48 +120,17 @@ class AboutDesktop extends StatelessWidget {
                             children: const [
                               AboutMeData(
                                 data: "Email",
-                                information: "hamza.6.shakeel@gmail.com",
+                                information: ContactUtils.email,
                               ),
                               AboutMeData(
                                 data: "From",
-                                information: "Attock, PK",
+                                information: ContactUtils.location,
                               ),
                             ],
                           ),
                         ],
                       ),
                       Space.y1!,
-                      Row(
-                        children: [
-                          SizedBox(
-                            height: AppDimensions.normalize(13),
-                            width: AppDimensions.normalize(40),
-                            child: OutlinedButton(
-                              onPressed: () =>
-                                  html.window.open(StaticUtils.resume, 'pdf'),
-                              child: const Text(
-                                "Resume",
-                              ),
-                            ),
-                          ),
-                          Space.x1!,
-                          Container(
-                            color: Colors.grey[900]!,
-                            width: AppDimensions.normalize(30),
-                            height: AppDimensions.normalize(0.5),
-                          ),
-                          ...WorkUtils.logos.asMap().entries.map(
-                                (e) => Expanded(
-                                  child: CommunityIconBtn(
-                                    icon: e.value,
-                                    link: WorkUtils.communityLinks[e.key],
-                                    height:
-                                        WorkUtils.communityLogoHeight[e.key],
-                                  ),
-                                ),
-                              )
-                        ],
-                      ),
                     ],
                   ),
                 ),
